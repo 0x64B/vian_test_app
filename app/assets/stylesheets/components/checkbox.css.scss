@@ -1,0 +1,112 @@
+div.checkbox-group {
+  font-family: "Museo Sans 500";
+  font-size: 14px;
+  .checkbox-item {
+    border: 1px solid #EEEFF1;
+    padding: 8px 16px;
+    border-radius: 4px;
+    max-width: 256px;
+    transition: .2s;
+    height: 42px;
+    margin-bottom: 12px;
+    flex: 1;
+  }
+  input[type="checkbox"] {
+    opacity: 0;
+  }
+  label {
+    font-family: "Museo Sans 500";
+    position: relative;
+    display: block;
+    padding-left: 26px;
+    line-height: 25px;
+    margin-bottom: -8px;
+    margin-top: -15px;
+    color: #A6A8BA;
+  }
+  label::before,
+  label::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    transition: .3s;
+  }
+  label::before {
+    height: 14px;
+    width: 14px;
+    border: 1px solid #EEEFF1;
+    background: #EEEFF1;
+    border-radius: 50%;
+    left: 0px;
+    top: 3px;
+  }
+  label::after {
+    height: 3px;
+    width: 7px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #FFF;
+    transform: rotate(-45deg);
+    left: 4px;
+    top: 7px;
+  }
+  input[type=checkbox]:checked + label::before {
+    background: #00AACE;
+    border-color: #00AACE;
+  }
+  input[type=checkbox]:checked + label{
+    color: #272B42;
+  }
+  input[type=checkbox]:checked:parent  {
+    color: #272B42;
+  }
+  input[type=checkbox]:hover + label::before {
+    background: #EEEFF1;
+    border-color: #00AACE;
+  }
+  input[type=checkbox]:checked:hover + label::before {
+    background: #00AACE;
+    border-color: #00AACE;
+  }
+  input[type="checkbox"] + label::after {
+    content: none;
+  }
+  input[type="checkbox"]:checked + label::after {
+    content: "";
+  }
+
+  &.inline {
+    label {
+      display: inline-block;
+    }
+  }
+}
+
+.option-item {
+  display: flex;
+  input[type="text"] {
+    max-width: 256px;
+    margin-left: 12px;
+  }
+  span.info {
+    width: auto;
+    line-height: 44px;
+  }
+}
+
+.show-option {
+  display: flex;
+  input[type="text"] {
+    width: 200px !important;
+  }
+  margin-left: 8px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number] {
+ -moz-appearance: textfield;
+ appearance: textfield;
+}

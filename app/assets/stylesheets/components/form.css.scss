@@ -1,0 +1,58 @@
+.fieldset {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+  flex-wrap: wrap;
+  & + .fieldset {
+    margin-top: 16px;
+  }
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+select {
+  width: 100%;
+	flex-basis: 150px;
+  flex-grow: 1;
+  height: 42px;
+  padding: 0 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  color: #0F142D;
+  border: 1px solid #EEEFF1;
+  transition: .2s;
+
+  & + input[type="text"],
+  & + input[type="number"],
+  & + input[type="date"],
+  & + input[type="email"],
+  & + select {
+    margin-left: 14px;
+  }
+
+  &::placeholder {
+    color: #A6A8BA;
+  }
+
+  &:focus {
+    border-color: #00AACE;
+  }
+
+  &.huge {
+    text-align: center;
+    font-family: "Museo Sans 900";
+    color: #0F142D;
+    display: block;
+    font-size: 34px;
+    height: 80px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+}
+
+select.state {
+  flex-basis: 30px;
+}
