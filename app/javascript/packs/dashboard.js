@@ -1,5 +1,7 @@
 $(document).on('turbolinks:load', () => {
 
+  console.log("LOAD OK")
+
   let mockData = {
     balance: 10000,
     receivable_balance: 5000
